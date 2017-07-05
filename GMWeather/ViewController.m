@@ -55,7 +55,7 @@
 - (void)deviceDidRotate {
     
     UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
-    NSLog(@"orientation:%ld", (long)orientation);
+    
     switch (orientation) {
         case UIDeviceOrientationPortrait:
         case UIDeviceOrientationPortraitUpsideDown:

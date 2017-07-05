@@ -109,7 +109,7 @@
             NSLog(@"Something went wrong! %@", error.localizedDescription);
         }
         else {
-            NSLog(@"Geo info: %@", responseData);
+            NSLog(@"Response Data is OK");
         }
 
     }else{

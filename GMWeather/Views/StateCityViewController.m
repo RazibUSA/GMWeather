@@ -57,9 +57,9 @@
 - (IBAction)doneButtonClicked:(id)sender {
     
     NSString *stateValue = [stateNames objectAtIndex:[_statePicker selectedRowInComponent:0]];
-    NSLog(@"state Val:%@", stateValue);
+   
     NSString *cityValue = [cityNames objectAtIndex:[_cityPicker selectedRowInComponent:0]];
-    NSLog (@"cite:%@", cityValue);
+    
     NSString *urlPath = [_scViewModel setUserSelection:stateValue city:cityValue];
     
     [self storeSelectedStateCity:stateValue city:cityValue];

@@ -68,7 +68,7 @@
     _scViewModelClass.geoDictionary = mutableDictionary;
     
     NSArray *cityList = [_scViewModelClass getCityNames:@"key"];
-    NSString *city = cityList;
+    NSString *city =(NSString*) cityList;
     NSLog(@"City%@", city);
     
     XCTAssertEqualObjects(city, @"Alta", @"State list should be generated!");

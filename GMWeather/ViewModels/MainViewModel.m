@@ -45,7 +45,7 @@
                     }
                 }
                 
-                NSLog(@"Days:%@ condtion:%@ Low:%@ H:%@ T:%@",dayTitle, condtion, lowTemp, highTemp, text);
+              //  NSLog(@"Days:%@ condtion:%@ Low:%@ H:%@ T:%@",dayTitle, condtion, lowTemp, highTemp, text);
                 
                 WeatherInfoModel *weatherInfoModel = [[WeatherInfoModel alloc] initWithWeatherData:dayTitle currentTemp:condtion highTemp:highTemp lowTemp:lowTemp condotionDescription:text];
                 
@@ -64,6 +64,10 @@
             [weatherDataList addObject:weatherInfoModel];
         }
         
+    } else{
+        WeatherInfoModel *weatherInfoModel = [[WeatherInfoModel alloc] initWithWeatherData:@"NONE" currentTemp:@"No Data" highTemp:nil lowTemp:nil condotionDescription:@"Can't Reach the server, Please check your network"];
+        
+        [weatherDataList addObject:weatherInfoModel];
     }
     
     return weatherDataList;
